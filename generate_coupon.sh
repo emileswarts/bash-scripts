@@ -19,34 +19,27 @@ count(){
 }
 
 words(){
-	paths | extract_words_from_paths | remove_non_alpha_chars | downcase | remove_long_words | unique | remove_confusing_characters
+	paths | 
+	extract_words_from_paths | 
+	remove_non_alpha_chars | 
+	downcase | 
+	remove_long_words | 
+	unique | 
+	remove_confusing_characters
 }
 
-paths(){
-   find /usr/share/man -type f
-}
+paths(){ find /usr/share/man -type f }
 
-extract_words_from_paths(){
-	sed 's/^.*\///' | sed 's/\..*$//'
-}
+extract_words_from_paths(){ sed 's/^.*\///' | sed 's/\..*$//' }
 
-remove_non_alpha_chars(){
-	grep -v '[^[:alpha:]]'
-}
-downcase(){
-	tr 'A-Z' 'a-z'
-}
-remove_long_words(){
-	egrep '^.{1,4}$'
-}
+remove_non_alpha_chars(){ grep -v '[^[:alpha:]]' }
 
-unique(){
-	sort -u
-}
+downcase(){ tr 'A-Z' 'a-z' } 
 
-remove_confusing_characters(){
-	grep -v l | grep -v I | grep -v 0 | grep -v O
-}
+remove_long_words(){ egrep '^.{1,4}$' } 
 
+unique(){ sort -u } 
+
+remove_confusing_characters(){ grep -v l | grep -v I | grep -v 0 | grep -v O }
 
 main

@@ -2,16 +2,13 @@
 main(){
 	stopServices
 	readBackupDir
-	copyToTmp
-	removeLdap
 	copyNewLdap
 	startServices
 }
 
 stopServices() { 
-	echo "sudo /sbin/service postfix stop" 
-	echo "sudo /sbin/service slapd stop" 
-	echo "sudo /sbin/service slapcat stop" 
+	echo "/sbin/service postfix stop" 
+	echo "/sbin/service slapd stop" 
 }
 
 readBackupDir() { 
@@ -19,22 +16,16 @@ readBackupDir() {
 	read backup_ldap 
 }
 
-copyToTmp(){ 
-	echo "cp $backup_ldap /tmp$backup_ldap" 
-}
-
-removeLdap(){ 
-	echo "rm -fr /var/lib/ldap/* " 
-}
-
 copyNewLdap(){ 
-	echo "mv /tmp$backup_ldap/* /var/lib/ldap$backup_ldap" 
+	echo "rm -f /var/lib/ldap/*" 
+	echo "slapadd $backup_ldap" 
+	echo "slapindex" 
+	echo "chown ldap.ldap /var/lib/ldap/*" 
 }
 
 startServices(){ 
-	echo "sudo /sbin/service postfix start" 
-	echo "sudo /sbin/service slapd start" 
-	echo "sudo /sbin/service slapcat start" 
+	echo "/sbin/service postfix start" 
+	echo "/sbin/service slapd start" 
 }
 
 main

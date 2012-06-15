@@ -1,0 +1,7 @@
+#!/bin/bash
+echo $1 >> ~/TODO/index
+cd ~/TODO/index
+git add .
+git commit -m "$1"
+ggpush
+echo "note added"

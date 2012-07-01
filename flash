@@ -1,5 +1,32 @@
 #!/bin/bash
 
-echo "Please enter server"
+echo "Please enter server eg. brix.fatbeehive.com"
 read server
-echo $server
+
+echo "Please enter path eg. /server/www/yoursite/www"
+read path
+
+rm -fr $path
+mkdir -p $path
+chown -R g+w $path
+
+echo "Creating path"
+
+echo "Please enter your username eg. rambo"
+read user
+
+hg clone ssh://$user@$server/$path $path
+
+echo "cloning.."
+
+echo "Please enter the database eg. lorem_site"
+read database
+
+echo "Please enter the database password eg. myspassword"
+read mysql_pass
+
+ssh $user@$server "mysqldump -u $user -p$mysql_pass $database > ~/mysql/$database.sql"
+scp -pr $user@$server:/home/$user/mysql/$database.sql ~/mysql_dump/$database.sql
+mysql -u $user -p$mysql_pass --execute="drop database $database"
+mysql -u $user -p$mysql_pass --execute="create database $database"
+mysql -u $user -p$mysql_pass $database <  ~/mysql_dump/$database.sql

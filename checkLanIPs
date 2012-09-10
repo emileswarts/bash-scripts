@@ -1,13 +1,16 @@
 #!/bin/bash
-for ip in $(seq 1 254); 
+for ip in $(seq 1 254);
 	do ping -c 1 192.168.1.$ip>/dev/null; 
-		[ $? -eq 0 ] && echo "192.168.1.$ip UP" || : ; 
-		if [ $? -eq 0]
+		#[ $? -eq 0 ] && echo "192.168.1.$ip UP" || : ; 
+		if [ $? -eq 0 ]
 		then
+			echo "192.168.1.$ip UP";
 			for ip in $(seq 1 1023); 
 				do
 				echo "nc -z 192.168.1.$ip 1-1023 "
 				nc -z 192.168.1.$ip 1-1023
 			done;
+		else
+			echo "miss - 192.168.1.$ip";
 		fi
 done

@@ -1,26 +1,7 @@
 #! /bin/bash
 
-#echoing weird variables
-
-var="'(]\\{}\$\""
-echo $var
-echo "$var"
+echo "why can't i write 's between single quotes "
 
 echo 
 
-IFS='\'
-echo $var
-echo "$var"
-
-echo 
-
-var2="\\\\\""
-echo $var2
-echo "$var2"
-
-echo 
-
-var2='\\\\'
-echo $var2
-
-exit
+echo 'why can'\''t i write '\''s between single quotes '

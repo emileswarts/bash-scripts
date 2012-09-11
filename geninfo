@@ -1,13 +1,34 @@
 #! /bin/bash
 
-true
-echo "exit status of \"true\" = $?"
+(( 0 && 1 ))
+echo $?
 
-!true
-echo "exit status of \"true\" = $?"
+let "num = (( 0 && 1 ))"
+echo $num
 
-ls |bogus_command
-echo "exit status of \"true\" = $?"
+let "num = (( 0 && 1))"
+echo $?
 
-! ls |bogus_command
-echo "exit status of \"true\" = $?"
+(( 200 || 11))
+echo $?
+
+let "num = (( 200 || 11 ))"
+echo $num
+
+let "num = (( 200 || 11 ))"
+echo $?
+
+(( 200 | 11 ))
+echo $?
+
+let "num = (( 200 | 11 ))"
+echo $num
+
+let "num = (( 200 | 11 ))"
+echo $?
+
+var=-2 && (( var+=2 ))
+echo $?
+
+var=-2 && (( var+=2 )) && echo $var
+

@@ -1,34 +1,20 @@
 #! /bin/bash
 
-(( 0 && 1 ))
-echo $?
+if cmp ~/.vimrc /Users/emileswarts/.vimrc &> /dev/null
+	then echo "Files a and b are identical"
+	else echo "Files a and b are different"
+fi
 
-let "num = (( 0 && 1 ))"
-echo $num
+if grep -q vim ~/.vimrc
+	then echo "File contains at least one occurence of bash"
+	else echo "File does not contain bla"
+fi
 
-let "num = (( 0 && 1))"
-echo $?
-
-(( 200 || 11))
-echo $?
-
-let "num = (( 200 || 11 ))"
-echo $num
-
-let "num = (( 200 || 11 ))"
-echo $?
-
-(( 200 | 11 ))
-echo $?
-
-let "num = (( 200 | 11 ))"
-echo $num
-
-let "num = (( 200 | 11 ))"
-echo $?
-
-var=-2 && (( var+=2 ))
-echo $?
-
-var=-2 && (( var+=2 )) && echo $var
-
+word=Linux
+letter_sequence=inu
+if echo "$word" | grep -q "$letter_sequence"
+then 
+	echo "$letter_sequence found"
+else
+	echo "$letter_sequence no found"
+fi

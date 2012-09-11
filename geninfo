@@ -1,7 +1,13 @@
 #! /bin/bash
 
-echo hello
-echo $?
+true
+echo "exit status of \"true\" = $?"
 
-lskdf
-echo $?
+!true
+echo "exit status of \"true\" = $?"
+
+ls |bogus_command
+echo "exit status of \"true\" = $?"
+
+! ls |bogus_command
+echo "exit status of \"true\" = $?"

@@ -1,24 +1,7 @@
 #! /bin/bash
 
-#quoting
+echo hello
+echo $?
 
-echo "\z"
-echo "\\z"
-
-#command substitution
-echo `echo \z`
-echo `echo \\z`
-echo `echo \\\z`
-echo `echo \\\\z`
-echo `echo \\\\\z`
-echo `echo \\\\\z`
-echo `echo "\z"`
-echo `echo "\\z"`
-
-cat <<EOF
-\z
-EOF
-
-cat <<EOF
-\\z
-EOF
+lskdf
+echo $?

@@ -1,9 +1,9 @@
 #! /bin/bash
 
-dir=~/
+var1=20
+var2=22
 
-if cd "$dir" 2>/dev/null; then
-	echo "Now in $dir"
-else
-	echo "Can't change dir"
-fi
+[[ "$var1" -ne "$var2"  ]] && echo "$var1 is not equal to $var2"
+
+home=~/
+[[ -d "$home" ]] || echo "$home directory does not exist"

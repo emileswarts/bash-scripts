@@ -1,8 +1,19 @@
 #! /bin/bash
 
-file=/etc/passwd
+decimal=15
+octal=017 # = 15 ( decimal )
+hex=0x0f  # = 15 ( decimal ) 
 
-if [[ -e $file ]]
+if [[ "$decimal" -eq "$octal" ]]
 then
-	echo "password file exsts"
+	echo "$decimal equals $octal"
+else
+	echo "$decimal not equals $octal"
+fi
+
+if [[ "$decimal" -eq "$hex" ]]
+then
+	echo "$decimal equals $hex"
+else
+	echo "$decimal not equals $hex"
 fi

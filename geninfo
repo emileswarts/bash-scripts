@@ -1,20 +1,39 @@
 #! /bin/bash
 
-if cmp ~/.vimrc /Users/emileswarts/.vimrc &> /dev/null
-	then echo "Files a and b are identical"
-	else echo "Files a and b are different"
-fi
+echo 
 
-if grep -q vim ~/.vimrc
-	then echo "File contains at least one occurence of bash"
-	else echo "File does not contain bla"
-fi
-
-word=Linux
-letter_sequence=inu
-if echo "$word" | grep -q "$letter_sequence"
+if test -z "$1"
 then 
-	echo "$letter_sequence found"
+	echo "No command-line arguments"
 else
-	echo "$letter_sequence no found"
+	echo "First command line argument is $1"
 fi
+
+echo
+
+if /bin/test -z "$1"
+then
+	echo "No command-line arguments"
+else
+	echo "First command line argument is $1"
+fi
+
+echo
+
+if [ -z "$1"]
+then
+	echo "No command-line arguments"
+else
+	echo "First command line argument is $1"
+fi
+
+echo
+
+if /bin/[ -z "$1"]
+then
+	echo "No command-line arguments"
+else
+	echo "First command line argument is $1"
+fi
+
+echo 

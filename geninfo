@@ -1,39 +1,8 @@
 #! /bin/bash
 
-echo 
+file=/etc/passwd
 
-if test -z "$1"
-then 
-	echo "No command-line arguments"
-else
-	echo "First command line argument is $1"
-fi
-
-echo
-
-if /bin/test -z "$1"
+if [[ -e $file ]]
 then
-	echo "No command-line arguments"
-else
-	echo "First command line argument is $1"
+	echo "password file exsts"
 fi
-
-echo
-
-if [ -z "$1"]
-then
-	echo "No command-line arguments"
-else
-	echo "First command line argument is $1"
-fi
-
-echo
-
-if /bin/[ -z "$1"]
-then
-	echo "No command-line arguments"
-else
-	echo "First command line argument is $1"
-fi
-
-echo 

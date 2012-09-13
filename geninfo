@@ -1,19 +1,9 @@
 #! /bin/bash
 
-decimal=15
-octal=017 # = 15 ( decimal )
-hex=0x0f  # = 15 ( decimal ) 
+dir=~/
 
-if [[ "$decimal" -eq "$octal" ]]
-then
-	echo "$decimal equals $octal"
+if cd "$dir" 2>/dev/null; then
+	echo "Now in $dir"
 else
-	echo "$decimal not equals $octal"
-fi
-
-if [[ "$decimal" -eq "$hex" ]]
-then
-	echo "$decimal equals $hex"
-else
-	echo "$decimal not equals $hex"
+	echo "Can't change dir"
 fi

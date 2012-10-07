@@ -1,9 +1,15 @@
 #! /bin/bash
 
-var1=20
-var2=22
+(( 0 ))
+echo "Exit status of \"(( 0 ))\" is $?"
 
-[[ "$var1" -ne "$var2"  ]] && echo "$var1 is not equal to $var2"
 
-home=~/
-[[ -d "$home" ]] || echo "$home directory does not exist"
+(( 1 ))
+echo "Exit status of \"(( 1 ))\" is $?"
+
+
+(( 5 < 4 ))
+echo "Exit status of \"(( 5 < 4 ))\" is $?"
+
+(( 5 > 4 ))
+echo "Exit status of \"(( 5 > 4 ))\" is $?"

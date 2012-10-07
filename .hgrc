@@ -1,0 +1,25 @@
+[extensions]
+color =
+hgext.graphlog =
+[color]
+status.modified = blue bold underline red_background
+status.added = green bold
+status.removed = red bold blue_background
+status.deleted = cyan bold underline
+status.unknown = magenta bold underline
+status.ignored = black bold
+[ui]
+merge = vimdiff
+username = Emile Swarts <emile.swarts123@gmail.com>
+editor = vim
+verbose = true
+[color]
+status.modified = magenta bold
+status.added = green bold
+status.removed = red bold
+status.deleted = cyan bold
+status.unknown = blue bold
+status.ignored = black bold
+[merge-tools]
+vimdiff.executable = vim
+vimdiff.args = -d $base $local $output $other +close +close

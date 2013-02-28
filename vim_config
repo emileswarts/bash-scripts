@@ -1,0 +1,3 @@
+ #!/bin/bash
+ ./configure --prefix=/usr --localstatedir=/var/lib/vim --with-features=huge --with-compiledby=ArchLinux --enable-gpm --enable-acl --with-x=yes
+ --enable-multibyte --enable-cscope --enable-perlinterp --enable-pythoninterp --disable-python3interp --enable-rubyinterp --enable-luainterp

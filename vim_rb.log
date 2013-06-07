@@ -1,0 +1,92 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.010  000.010: --- VIM STARTING ---
+000.100  000.090: Allocated generic buffers
+000.388  000.288: locale set
+000.392  000.004: clipboard setup
+000.398  000.006: window checked
+000.978  000.580: inits 1
+001.037  000.059: parsing arguments
+001.039  000.002: expanding arguments
+004.766  003.727: shell init
+005.082  000.316: Termcap init
+005.101  000.019: inits 2
+005.244  000.143: init highlight
+005.568  000.066  000.066: sourcing /usr/local/share/vim/vim73/ftoff.vim
+005.814  000.177  000.177: sourcing /Users/emileswarts/.vim/autoload/pathogen.vim
+039.945  018.352  018.352: sourcing /usr/local/share/vim/vim73/filetype.vim
+040.181  000.057  000.057: sourcing /usr/local/share/vim/vim73/indent.vim
+040.569  000.015  000.015: sourcing /usr/local/share/vim/vim73/filetype.vim
+040.781  000.057  000.057: sourcing /usr/local/share/vim/vim73/ftplugin.vim
+053.631  012.765  012.765: sourcing /Users/emileswarts/.vim/colors/skywalker.vim
+067.519  000.495  000.495: sourcing /usr/local/share/vim/vim73/syntax/syncolor.vim
+068.567  000.474  000.474: sourcing /usr/local/share/vim/vim73/syntax/syncolor.vim
+083.602  017.221  016.252: sourcing /Users/emileswarts/.vim/colors/skywalker.vim
+083.794  017.590  000.369: sourcing /usr/local/share/vim/vim73/syntax/synload.vim
+083.843  018.015  000.425: sourcing /usr/local/share/vim/vim73/syntax/syntax.vim
+086.069  080.649  031.145: sourcing $HOME/.vimrc
+086.080  000.187: sourcing vimrc file(s)
+086.559  000.230  000.230: sourcing /Users/emileswarts/.vim/bundle/clam/plugin/clam.vim
+087.044  000.137  000.137: sourcing /Users/emileswarts/.vim/bundle/ctrlp/autoload/ctrlp/mrufiles.vim
+087.179  000.458  000.321: sourcing /Users/emileswarts/.vim/bundle/ctrlp/plugin/ctrlp.vim
+089.754  002.437  002.437: sourcing /Users/emileswarts/.vim/bundle/dbext/plugin/dbext.vim
+093.439  003.533  003.533: sourcing /Users/emileswarts/.vim/bundle/fugitive/plugin/fugitive.vim
+093.690  000.120  000.120: sourcing /Users/emileswarts/.vim/bundle/gist/plugin/gist.vim
+093.858  000.052  000.052: sourcing /Users/emileswarts/.vim/bundle/gundo/plugin/gundo.vim
+094.769  000.706  000.706: sourcing /Users/emileswarts/.vim/bundle/l9/autoload/l9.vim
+094.966  000.993  000.287: sourcing /Users/emileswarts/.vim/bundle/l9/plugin/l9.vim
+095.396  000.129  000.129: sourcing /Users/emileswarts/.vim/bundle/neocomplcache/plugin/neocomplcache/buffer_complete.vim
+095.499  000.065  000.065: sourcing /Users/emileswarts/.vim/bundle/neocomplcache/plugin/neocomplcache/dictionary_complete.vim
+095.596  000.062  000.062: sourcing /Users/emileswarts/.vim/bundle/neocomplcache/plugin/neocomplcache/include_complete.vim
+095.693  000.062  000.062: sourcing /Users/emileswarts/.vim/bundle/neocomplcache/plugin/neocomplcache/syntax_complete.vim
+095.788  000.060  000.060: sourcing /Users/emileswarts/.vim/bundle/neocomplcache/plugin/neocomplcache/tags_complete.vim
+096.460  000.637  000.637: sourcing /Users/emileswarts/.vim/bundle/neocomplcache/plugin/neocomplcache.vim
+101.497  004.888  004.888: sourcing /Users/emileswarts/.vim/bundle/nerdtree/plugin/NERD_tree.vim
+101.901  000.273  000.273: sourcing /Users/emileswarts/.vim/bundle/powerline/plugin/Powerline.vim
+102.555  000.535  000.535: sourcing /Users/emileswarts/.vim/bundle/snipmate/plugin/snipMate.vim
+103.432  000.755  000.755: sourcing /Users/emileswarts/.vim/bundle/surround/plugin/surround.vim
+129.145  025.591  025.591: sourcing /Users/emileswarts/.vim/bundle/syntastic/plugin/syntastic.vim
+131.152  001.677  001.677: sourcing /Users/emileswarts/.vim/bundle/taglist/plugin/taglist.vim
+131.511  000.204  000.204: sourcing /Users/emileswarts/.vim/bundle/vim-commentary/plugin/commentary.vim
+136.412  004.749  004.749: sourcing /Users/emileswarts/.vim/bundle/yankring/plugin/yankring.vim
+136.852  000.096  000.096: sourcing /usr/local/share/vim/vim73/plugin/getscriptPlugin.vim
+137.224  000.336  000.336: sourcing /usr/local/share/vim/vim73/plugin/gzip.vim
+137.610  000.349  000.349: sourcing /usr/local/share/vim/vim73/plugin/matchparen.vim
+138.435  000.717  000.717: sourcing /usr/local/share/vim/vim73/plugin/netrwPlugin.vim
+138.504  000.024  000.024: sourcing /usr/local/share/vim/vim73/plugin/rrhelper.vim
+138.580  000.041  000.041: sourcing /usr/local/share/vim/vim73/plugin/spellfile.vim
+138.830  000.214  000.214: sourcing /usr/local/share/vim/vim73/plugin/tarPlugin.vim
+139.007  000.137  000.137: sourcing /usr/local/share/vim/vim73/plugin/tohtml.vim
+139.232  000.188  000.188: sourcing /usr/local/share/vim/vim73/plugin/vimballPlugin.vim
+139.533  000.245  000.245: sourcing /usr/local/share/vim/vim73/plugin/zipPlugin.vim
+141.235  001.540  001.540: sourcing /Users/emileswarts/.vim/bundle/snipmate/after/plugin/snipMate.vim
+141.397  000.033  000.033: sourcing /Users/emileswarts/.vim/after/plugin/surround-mapping.vim
+141.404  003.894: loading plugins
+141.413  000.009: inits 3
+141.705  000.292: reading viminfo
+141.722  000.017: setting raw mode
+141.723  000.001: start termcap
+141.772  000.049: clearing screen
+144.297  000.511  000.511: sourcing /usr/local/share/vim/vim73/indent/ruby.vim
+617.666  472.545  472.545: sourcing /usr/local/share/vim/vim73/ftplugin/ruby.vim
+621.311  002.818  002.818: sourcing /usr/local/share/vim/vim73/syntax/ruby.vim
+621.701  000.169  000.169: sourcing /Users/emileswarts/.vim/bundle/powerline/autoload/Pl.vim
+622.469  000.642  000.642: sourcing /Users/emileswarts/.vim/bundle/powerline/Powerline_distinguished_distinguished_fancy.cache
+623.496  000.073  000.073: sourcing /Users/emileswarts/.vim/bundle/powerline/autoload/Pl/Match.vim
+638.651  000.129  000.129: sourcing /Users/emileswarts/.vim/bundle/ctrlp/autoload/ctrlp/utils.vim
+640.204  021.545: opening buffers
+640.761  000.557: BufEnter autocommands
+640.764  000.003: editing files in windows
+641.482  000.169  000.169: sourcing /Users/emileswarts/.vim/bundle/nerdtree/nerdtree_plugin/exec_menuitem.vim
+642.005  000.477  000.477: sourcing /Users/emileswarts/.vim/bundle/nerdtree/nerdtree_plugin/fs_menu.vim
+648.077  006.667: VimEnter autocommands
+648.082  000.005: before starting main loop
+650.284  000.135  000.135: sourcing /Users/emileswarts/.vim/bundle/powerline/autoload/Powerline/Functions.vim
+650.549  000.041  000.041: sourcing /Users/emileswarts/.vim/bundle/powerline/autoload/Powerline/Functions/fugitive.vim
+651.124  000.052  000.052: sourcing /Users/emileswarts/.vim/bundle/powerline/autoload/Powerline/Functions/syntastic.vim
+652.199  003.889: first screen update
+652.201  000.002: --- VIM STARTED ---

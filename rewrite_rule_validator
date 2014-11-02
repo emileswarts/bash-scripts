@@ -1,0 +1,68 @@
+#!/bin/bash
+
+main () {
+  file=$1;
+  host=$2;
+  result_cache="/tmp/rewrite_result";
+
+  test_urls
+}
+
+test_urls () {
+  touch $result_cache
+
+  rewrite_rules|while read line; do test_url; done
+
+  rm $result_cache
+}
+
+test_url () {
+    echo
+    echo "---------------------------------------------------------------------------------"
+    echo "Getting $host`target`"
+    assert_rewrite;
+    record_404s;
+    echo "---------------------------------------------------------------------------------";
+    echo
+
+    cat $result_cache
+}
+
+record_404s() {
+  if echo `get_status_code` |grep -q "404"
+  then
+    echo "404 ALERT: $host`target` $host`destination`\n" >> $result_cache
+  fi
+}
+
+assert_rewrite () { get_url|grep "$host`destination`"; }
+
+get_url () { curl -s "$host`target`"|redirected_matcher; }
+
+get_status_code () { echo $(curl -I -s -L "$host`target`" | grep "HTTP/1.1"); }
+
+destination () { destination_column|sanitize; }
+
+target () { target_column|sanitize; }
+
+redirected_matcher () { grep "The document has moved"; }
+
+normalised_line() { cat|sanitize; }
+
+sanitize () { cat|sed 's/[\^]//
+s/[\$]//
+s/[\?]//'|replace '(.*)' ''; }
+
+target_column () { formatted_line|cut -d" " -f2; }
+
+formatted_line () { echo $line |remove_leading_whitespace; }
+
+destination_column () { formatted_line|cut -d" " -f3; }
+
+remove_leading_whitespace () { sed "s/^[ \t]*//"; }
+
+rewrite_rules () { read_file|grep RewriteRule; }
+
+read_file () { cat $file; }
+
+main $1 $2

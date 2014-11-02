@@ -25,6 +25,7 @@ test_url () {
     echo "---------------------------------------------------------------------------------";
     echo
 
+    echo "ERROR COUNT: `cat $result_cache|wc -l`"
     cat $result_cache
 }
 

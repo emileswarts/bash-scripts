@@ -1,5 +1,1 @@
-Welcome to Anarchy.
-
-┌( ಠ_ಠ)┘
-
-╚(ಠ_ಠ)=┐
+Welcome to Anarchy.  (̿ ▀̿ ̿Ĺ̯̿̿▀̿ ̿ )̄
